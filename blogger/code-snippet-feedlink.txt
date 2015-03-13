@@ -1,4 +1,5 @@
-﻿https://gdata.youtube.com/feeds/api/playlists/snippets?q=bsquochoai&start-index=11&max-results=10&v=2
+﻿-------------YOUTUBE-------------
+https://gdata.youtube.com/feeds/api/playlists/snippets?q=bsquochoai&start-index=11&max-results=10&v=2
 Lấy playlist youtube từ playlist 11 đến 21
 
 https://query.yahooapis.com/v1/public/yql?q=select+*+from+json+where+url%3D%22https%3A%2F%2Fgdata.youtube.com%2Ffeeds%2Fapi%2Fusers%2Fbsquochoai%2Fplaylists%3Fv%3D2%26start-index%3D1%26max-results%3D50%26alt%3Djson%22++and+itemPath+%3D+%22json.feed.entry%22&format=json&diagnostics=true

@@ -1,0 +1,138 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<title>Scribd Javascript API Demo</title>
+
+		<script type="text/javascript" src='https://www.scribd.com/javascripts/scribd_api.js'></script>
+
+		<style>
+
+			h2 {
+				margin: 0;
+				padding: 2px;
+				display: inline;
+				font-weight: 200;
+				font-size: 1.5em;
+				letter-spacing: -1px;
+			}
+
+			h4 {
+				margin-bottom: 5px;
+				margin-top: 10px;
+			}
+
+			#author {
+				color: #aaa;
+				font-size: .7em;
+				margin: 2px;
+			}
+
+			#container {
+				padding: 15px;
+				width: 700px;
+				border: 1px solid #eee;
+				border-right: 1px solid #aaa;
+				border-bottom: 1px solid #aaa;
+			}
+
+			#header_container {
+				margin-top: 20px;
+			}
+
+			#bookmarks {
+				font-size: .8em;
+				padding: 5px;
+				text-align: left;
+				border-top: 1px dotted #ccc;
+				border-bottom: 1px dotted #ccc;
+			}
+
+			.clearfix {
+				clear: both;
+				height: 0;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			View Source and you'll see that this is all dynamically generated using the Scribd Javascript API.
+
+			<div id='header_container'>
+				<h2 id="header"> Loading Document... </h2><br/>
+				<span id="author"></span>
+				<div id="bookmarks">
+					<h4>Bookmarks</h4>
+					<ul>
+						<li><a href="javascript:goToPage( 3 );">Page 3</a></li>
+						<li><a href="javascript:goToMiddle();">Middle</a></li>
+						<li><a href="javascript:goToEnd();">End</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix">&nbsp;</div>
+
+			<div id='embedded_doc'><a href='http://www.scribd.com'>Scribd</a></div>
+
+			<div id='footer'>Footer content below the document.</div>
+
+		</div>
+
+		<script type="text/javascript">
+
+			// Instantiate iPaper
+		var scribd_doc = scribd.Document.getDoc(2520449, 'key-1127428tb3rbejns9bhr');
+
+		var onDocReady = function(e) {
+			var header = document.getElementById('header');
+			var author = document.getElementById('author');
+
+			header.innerHTML = scribd_doc.api.getTitle();
+			author.innerHTML = "Uploaded by <a href='http://scribd.com/people/view/" + scribd_doc.api.getAuthorId() + "'>";
+			author.innerHTML += scribd_doc.api.getAuthorName() + "</a>";
+		}
+
+var onPageChanged = function(e) {
+	var page = scribd_doc.api.getPage();
+}
+
+// Parameters
+scribd_doc.addParam('height', 420);
+scribd_doc.addParam('width', 530);
+scribd_doc.addParam('auto_size', true);
+scribd_doc.addParam('mode', 'scroll');
+scribd_doc.addParam('jsapi_version', 2);
+
+// Attach event listeners
+scribd_doc.addEventListener('docReady', onDocReady);
+scribd_doc.addEventListener('pageChanged', onPageChanged);
+
+// Write the instance
+scribd_doc.seamless('embedded_doc');
+
+// Bookmark Helpers
+var goToPage = function(page) {
+	if (scribd_doc.api){
+		scribd_doc.api.setPage(page);
+	}
+}
+
+var goToMiddle = function() {
+	if (scribd_doc.api){
+		goToPage( Math.floor(scribd_doc.api.getPageCount()/2) );
+	}
+}
+
+var goToEnd = function() {
+	if (scribd_doc.api) {
+		goToPage(scribd_doc.api.getPageCount());
+	}
+}
+</script>
+</body>
+</html>
