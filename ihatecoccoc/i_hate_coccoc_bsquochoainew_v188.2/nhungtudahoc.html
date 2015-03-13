@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="thongbao/css/bootstrap.min.css" rel="stylesheet">
+	 <title>Quà tặng từ thầy, học anh văn cùng thầy | bsquochoai.ga</title>
+<style>
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+  a{color:blue}
+  #luupdf,#xoatatca, .glyphicon-remove-circle{display:none}
+}
+#luupdf,#xoatatca{
+	background-color: darkorange;
+	font-size: 70%;
+	padding: 3px;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+}
+.glyphicon-remove-circle{cursor: pointer;
+}
+#xoatatca {margin-left: 8px;background-color:black }
+</style>
+
+  </head>
+  <body>
+   <script src="jquery-2.1.1.min.js"></script>
+	<script src="thongbao/js/bootstrap.min.js"></script>
+	<script src="thongbao/nhungtudahoc.js"></script>
+	<h3>Tất cả từ em đã học: <span id="luupdf">Lưu lại PDF</span><span id="xoatatca">Xóa tất cả</span></h3>
+	<table id="tudahoc" class="table table-hover">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Câu, từ</th>
+			 <th>Ngôn ngữ</th>
+          <th>Trang web</th>
+          <th>Thời gian</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+	 <div class="modal fade" id="modalxacnhanxoa" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Em đã suy nghĩ kỹ chưa?</h4>
+          </div>
+          <div class="modal-body">
+            <p>Vì một khi đã xác nhận xóa là em sẽ chính tay mình làm mất toàn bộ dữ liệu từ ngữ em đã bỏ bao thời gian ra để học, mà sau đó em sẽ không thể kiếm đâu ra những từ đó được nữa.</p>
+				<p>Thầy khuyên nên tắt cái bảng này và bấm vào nút <span id="luupdf">Lưu lại PDF</span> để lưu toàn bộ dữ liệu này lên <strong>Google Drive</strong> hoặc lưu lại <strong>file pdf</strong> trên máy tính cho tiện việc xem lại sau này.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" id="xacnhanxoa">Ok, xúc tiến luôn đi thầy</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Dạ khoan, em lưu lại cái đã</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+  </body>
+</html>

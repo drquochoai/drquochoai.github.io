@@ -1,0 +1,25 @@
+.togetherjs .togetherjs-modal > header, .togetherjs .togetherjs-window > header, .togetherjs .togetherjs-modal section.togetherjs-buttons{background: #7E3252;}
+.togetherjs-cancel{color: #48FA79;}
+.togetherjs .togetherjs-modal{background-color: #C0DD37;}
+.togetherjs .togetherjs-modal section.togetherjs-buttons {color: white;}
+.togetherjs button, .togetherjs img {cursor:pointer}
+button:disabled{opacity:0.5}
+.togetherjs .togetherjs-modal header button.togetherjs-close {border-left: 0px}
+#togetherjs-dock.togetherjs-dock-right {border-radius:0px;
+height: auto !important; bottom: 40%;}
+.togetherjs #togetherjs-dock-anchor{display:none}
+#togetherjs-pick-color{height:auto}
+.togetherjs #togetherjs-buttons #togetherjs-audio-button{display:none;}
+.togetherjs-cursor .togetherjs-cursor-container{
+opacity: 0.5;
+padding: 2px;
+border: 0px;
+-moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2); 
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+#togetherjs-dock-participants {
+	max-height:60px;
+	overflow: hidden;
+}

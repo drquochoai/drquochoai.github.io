@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="thongbao/css/bootstrap.min.css" rel="stylesheet">
+	 
+<style>
+#myTabContent{width:100%; height:100%;padding: 0px 20px}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+	color: #262626;
+	text-decoration: none;
+	background-color: #00CFEA;
+}
+#slider{
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.input-group {margin-top:10px}
+</style>
+
+  </head>
+  <body>
+    <script src="jquery-2.1.1.min.js"></script>
+	     <script src="thongbao/js/bootstrap.min.js"></script>
+		  <script src="thongbao/background-window.js"></script>
+		  
+	 <div role="tabpanel">
+<div class="tabthongbao" role="tabpanel">
+    <ul id="myTab" class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"  data-toggle="tooltip" data-placement="bottom" title="Lịch quay video và giờ học hằng ngày của thầy sẽ được thông báo trên này" ><a href="#lichquay" id="lichquay-tab" role="tab" data-toggle="tab" aria-controls="lichquay" aria-expanded="true">Lịch quay</a></li>
+      <li role="presentation"  data-toggle="tooltip" data-placement="bottom" title="Vào để trò chuyện cùng thầy và các bạn, có một số giới hạn về cách đặt tên, từ ngữ lúc nói chuyện, cũng như thời gian từng câu nói." ><a href="#liveshowchemgio" role="tab" id="liveshowchemgio-tab" data-toggle="tab" aria-controls="liveshowchemgio">Liveshow chém gió!</a></li>
+		
+      <li role="presentation" class="dropdown">
+        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">Tính năng <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+		  
+		  <li ><a href="#caidatgiongnoi" tabindex="-1" role="tab" id="caidatgiongnoi-tab" data-toggle="tab" aria-controls="caidatgiongnoi" style="    color:  gold;   text-transform: uppercase;    font-weight: bold;">&Cài đặt phần mềm</a></li>
+		  
+			<li ><a href="#nhungtudahoc" tabindex="-1" role="tab" id="nhungtudahoc-tab" data-toggle="tab" aria-controls="nhungtudahoc">&Những từ đã học</a></li>
+			
+	       <li><a href="#phienbanvatinhnang" tabindex="-1" role="tab" id="phienbanvatinhnang-tab" data-toggle="tab" aria-controls="phienbanvatinhnang">@Phiên bản và tính năng</a></li>
+			 <li><a href="#help" tabindex="-1" role="tab" id="help-tab" data-toggle="tab" aria-controls="help">@Trợ giúp</a></li>
+			 <li><a href="#goiytinhnangmoi" tabindex="-1" role="tab" id="goiytinhnangmoi-tab" data-toggle="tab" aria-controls="goiytinhnangmoi">@Gợi ý tính năng mới</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="lichquay" aria-labelledby="lichquay-tab">
+        <p></p>
+      </div>
+		<div role="tabpanel" class="tab-pane fade in active" id="help" aria-labelledby="help-tab">
+        <h4>Các phím tắt nhanh:</h4>
+		  <ol>
+				<li>Bật/Tắt phần mềm: Alt+Q</li>
+				<li>Mở máy tính Casio: Alt+S</li>
+				<li>Đọc lại âm thanh vừa nghe: Alt+R</li>
+				<li>Pause/Resume âm thanh đang đọc: Q</li>
+			</ol>
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="liveshowchemgio" aria-labelledby="liveshowchemgio-tab">
+        <p><iframe src="" style=" border-width:0 " width="90%" height="600" frameborder="0" scrolling="no"></iframe></p>
+      </div>
+		
+      <div role="tabpanel" class="tab-pane fade" id="phienbanvatinhnang" aria-labelledby="phienbanvatinhnang-tab">
+        <p>  <div id=maincontain>
+    <h3>Các tính năng hiện có của bản 174.4</h3>
+<a href="https://www.youtube.com/playlist?list=PLToOY6vcfQZvV0RHPXn372JXI5JUQiReR" target="_blank" style="color:rgb(0, 210, 42)">Cập nhật phiên bản mới nhất tại đây</a>
+<p><b>Lưu ý</b>: Các lời bên dưới là những điều tâm sự của tôi đến với các bạn, những người đã tin tưởng và sử dụng phần mềm này và bảng này chỉ xuất hiện một lần duy nhất là khi bạn cài đặt phần mềm, vì thế hãy đọc kỹ trước khi có ý định tắt nó xuống vì bất kỳ lý do gì. Cám ơn các bạn nhiều lắm!</p>
+	<ol>
+	<li><b>Lưu ý</b>: Không tải xuống phần mềm ở bất kỳ nguồn nào khác ngoài kênh của bsquochoai, tôi là tác giả duy nhất của phần mềm này, tôi chia sẽ mã nguồn mở cho mọi người cùng sử dụng và nghiên cứu phát triển thành những phiên bản của riêng mình. Tôi có thể khẳng định rằng với các lỗi hiện có của internet và trình duyệt Chrome, tôi có thể làm bất cứ thứ gì trên máy tính của bạn, nhưng tôi đã không làm thế và tôi không đảm bảo rằng những người hiểu biết về lập trình khác, khi download mã nguồn của tôi về lại không có ý đồ xấu với người sử dụng. Nếu muốn một tính năng nào đó, hãy vào mục Gợi ý tính năng mới, tôi sẽ làm cho bạn, đừng dại dột thêm một tính năng nhỏ nào đó từ bên ngoài mà làm mất tất cả. Những thứ bạn có thể bị mất khi cài một extension trên Chrome là: phần mềm có thể tự động download mã độc từ một website bất kỳ về và khởi động nó lên, phần mềm nó có thể ghi lại bất kể thứ gì mà bạn đã xem trên internet như video, website đã xem, mật khẩu bạn đã đánh trên các website, mã thẻ ngân hàng và các thông tin bạn đã sử dụng để giao dịch trên internet... tất cả những thứ đó sẽ được gửi về 1 server, họ tổng hợp lại và bắt đầu hút tiền từ ví của bạn, một phần mềm miễn phí, nhưng cái giá của nó là đắt hơn cả cuộc sống và gia đình của bạn. Những kỹ thuật tôi sử dụng trên phần mềm này là trãi qua thời gian dài nghiên cứu cấu trúc của từng website và khai thác những lỗ hỏng bảo mật của của các website đó, không phải ai cũng có thể đễ dàng tìm ra được, vì thế những người chỉnh sửa phần mềm để hack cuộc sống của bạn đều sẽ là những người thông minh và dụ dỗ bạn đến nỗi bạn phải thấy thích và nghe làm theo những gì họ muốn.</li>
+<li>Hoạt động bằng c&aacute;ch khối chọn&nbsp;c&acirc;u văn lại, hoặc nhấp đ&ocirc;i chuột v&agrave;o một chữ để tr&igrave;nh duyệt tự động khối lại.</li>
+<li>Đọc được bất kỳ loại ng&ocirc;n ngữ n&agrave;o bằng Google Translate như tiếng: Anh, Ph&aacute;p, &Yacute;, Đức, H&agrave;n, Trung Quốc, Nga, Việt...&nbsp;</li>
+<li>Tự động dịch từ bất kỳ loại ng&ocirc;n ngữ n&agrave;o sang ng&ocirc;n ngữ m&agrave; m&igrave;nh chỉ định tr&ecirc;n bất kỳ website n&agrave;o.</li>
+<li>C&aacute;c tổ hợp ph&iacute;m quan trọng:<ol>
+<li>&quot;Alt+R&quot;: nghe lại c&acirc;u vừa mới nghe</li>
+<li>&quot;Alt+Q&quot;: bật tắt phần mềm</li>
+<li>&quot;Q&quot;: Pause/Resume&nbsp;c&acirc;u từ&nbsp;đang nghe</li>
+<li>&quot;Alt+S&quot;: mở máy tính casio</li>
+</ol>
+</li>
+<li>C&aacute;c t&iacute;nh năng lớn hỗ trợ học ngoại ngữ ở trong phần c&agrave;i đặt, trong đ&oacute; mục &quot;@Những từ đ&atilde; học&quot; l&agrave; hay v&agrave; b&aacute; đạo</li>
+<li>X&oacute;a bỏ hầu hết c&aacute;c loại quảng c&aacute;o từ c&aacute;c trang web lớn ở Việt Nam v&agrave; nước ngo&agrave;i, l&agrave;m giảm băng th&ocirc;ng khi lướt web v&agrave; tăng tốc độ tải website l&ecirc;n gấp 4 lần. Đặc biệt x&oacute;a quảng c&aacute;o trong video của Youtube, Zing TV, Zing MP3, vivo.vn, hdviet.com,..</li>
+<li>Vượt qua sự bảo mật VIP của tienganh123.com để tạo n&ecirc;n một trang học tiếng anh cực hay cho c&aacute;c em học sinh. Hi vọng sẽ kh&ocirc;ng sớm được sửa lại.</li>
+<li>Ngoài ra còn nhiều tính năng lặt vặc khác mà khi truy cập vào internet các bạn sẽ tìm hiểu thêm.</li>
+</ol>
+<h4>Các bước tiến quan trọng trong những phiên bản trước (số càng thấp là phiên bản càng mới)</h4>
+<ol>
+<li>Đồng hồ báo giờ lúc 19:55 phút hàng ngày thời gian học anh văn cùng thầy trên Alo Alo</li>
+<li>Thêm tính năng Download video nhanh cho các video trên Youtube</li>
+<li>Thêm tính năng tự động chơi lại khi đã hết video trên Youtube, thích hợp cho các bạn nghe nhạc</li>
+<li>Chỉnh sửa lại mục download của mp3.zing.vn để có thể tải bài hát với -Tên bài hát- Tên ca sĩ.mp3 luôn, không còn dạng mã như trước nữa</li>
+<li>Sửa lỗi khi mở lại Chrome thì bị reset lại mọi cài đặt lúc trước.</li>
+<li>Thêm Công cụ máy tính Casio cho cho dễ tính toán bằng phím nhanh Alt+S, có thể bấm dù ở bất kỳ trang nào trong Chrome</li>
+<li>Sửa các lỗi về việc đánh chữ R là nó đọc lại câu mới</li>
+<li>Thêm các phím tắt nhanh cho phần mềm Alt+Q, Alt+R, Q</li>
+<li>Thêm tính năng "Tắt toàn bộ" khi không muốn học nữa, bật lại khi muốn học.</li>
+<li>Thêm tính năng xóa từng từ và xóa toàn bộ những từ đã lưu</li>
+<li>Càn quét qua các trang lớn ở VN và đã xóa toàn bộ quảng cáo ở những trang đó. Nếu muốn xóa trang nào nữa thì hãy vào mục "Gợi ý tính năng mới" nói thầy biết nhen. ^^ : vivo.cn, vnexpress.net, tuoitre.vn, nhaccuatui.vn,..</li>
+<li>Chọn ngôn ngữ và đọc được bất kỳ thứ tiếng nào theo chỉ định của em bằng Google Translate</li>
+<li>Tự động phát hiện và dịch được bất kỳ ngôn ngữ nào sang thứ tiếng mà em mong muốn (mặc định dịch sang tiếng việt). Và đã có thể tự động dịch cả một câu.</li>
+<li>Hack toàn bộ tính năng VIP của tienganh123.com (để test các em sử dụng trình duyệt khác or chrome không có phần mềm của thầy để xem thử nhen)</li>
+<li>Sửa lỗi hiển các trang trắng mặc dù đã load như facebook.com, những video youtube trên website,.. ở phiên bản trước</li>
+<li>Giao diện và kỹ thuật cực mới của phần Từ điển</li>
+<li>Kỹ thuật hack quảng cáo video trang hdviet.com cho thầy Đạt</li>
+
+    <li>Hỗ trợ các thứ tiếng lớn: Mỹ, Anh (nam, nữ), Hàn, Trung, Nhật,...</li>
+    <li>Sửa lỗi copy, và bảo mật phần mềm</li>
+    <li>Sửa tính năng qua lại giữa Pause, và Resume khi đang nghe đọc một câu dài bằng ấn nút "Q"</li>
+    <li>Đọc lại từ mình vừa mới nghe bằng việc ấn tổ hợp nút "Alt+R"</li>
+    <li>Cài đặt tốc độ đọc, âm lượng đọc của những con nô lệ tình... yêu ngoại ngữ</li>
+    <li>Highlight những từ mình đã học trong một trang web và lưu lại</li>
+    <li>Lưu những từ đã học và lưu trữ online thành file pdf trong Google Drive của mình</li>
+    <li>
+        Nhấp đôi vào một từ để nghe google đọc (có phân biệt tiếng Mỹ và tiếng Việt)
+    </li>
+    <li>
+        Khối lại để nghe đọc cả câu văn (phân biệt tiếng Mỹ và tiếng Việt)
+    </li>
+    <li>
+        Bấm R để đọc lại âm thanh, Bấm bất kỳ nút nào khác để dừng đọc
+    </li>
+    <li>
+        Xóa bỏ tất cả các loại quảng cáo từ Google Adsense trên tất cả các website có quảng cáo từ google.
+    </li>
+    <li>
+        Với: http://tienganh123.com
+        <ul><li>Sử dụng được hầu hết các tính năng VIP để tự học và làm bài tập (còn đang phát triển thêm): có thể nghe toàn bộ âm thanh, bài nghe, từ vựng mà không cần VIP, làm được các bài tập VIP của các khóa học mà không cần phải đăng nhập</li></ul>
+    </li>
+    <li>
+        Với: http://youtube.com
+        <ul><li>Tất cả video đều được xóa bỏ quảng cáo nhỏ ngang bên trong video và và quảng cáo vuông to bên cạnh video, nút SETTING được đưa ngang quang cho dễ nhìn và dễ chọn.</li></ul>
+    </li>
+    <li>
+        Với http://mp3.zing.vn
+        <ul>
+            <li>Có nút Tải xuống bên dưới mỗi bài hát</li>
+            <li>Với Playlist có nút tải xuống bên cạnh mỗi bài hát, và có nút "Tải hết luôn!" Bấm 1 cái sẽ tải xuống tất cả các bài hát trong playlist đó</li>
+            <li>Với videos, xóa toàn bộ quảng cáo trong video và có tính năng tải xuống theo 4 độ phân giải 360p, 480p,720p, 1080p</li></ul>
+    </li>
+    <li>
+        Với http://tv.zing.vn
+        <ul><li>Xóa toàn bộ quảng cáo trước khi xem video và toàn bộ quảng cáo trong trang (tính năng VIP)</li></ul>
+    </li>
+</ol>
+</div></p>
+      </div>
+		
+		<div role="tabpanel" class="tab-pane fade" id="cacloihienco" aria-labelledby="cacloihienco-tab">
+        <p></p>
+      </div>
+		
+		<div role="tabpanel" class="tab-pane fade" id="goiytinhnangmoi" aria-labelledby="goiytinhnangmoi-tab">
+        <p><iframe src="" style=" border-width:0 " width="500" height="500" frameborder="0" scrolling="no"></iframe></p>
+      </div>
+		
+		<div role="tabpanel" class="tab-pane fade" id="caidatgiongnoi" aria-labelledby="caidatgiongnoi-tab">
+		<ul class="nav nav-pills" style="margin-top:10px">
+		  <li role="presentation"><button type="button" id="maytinhcasio" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Phím nhanh Alt+S"><span class="glyphicon glyphicon-th" aria-hidden="true"></span> Máy tính casio</button></li>
+		  <li role="presentation"><button type="button" id="tudahoc"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Vào mục các từ đã học"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Từ đã học</button></li>
+		  <li role="presentation"><button type="button" id="tinhnang"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Các tính năng hiện có của phần mềm"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> Tính năng</button></li>
+		  <li role="presentation"><button type="button" id="mngoiy"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Gợi ý tính năng mới"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Gợi ý</button></li>
+		  <li role="presentation"><button type="button" id="mnhelp"  class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="bottom" title="Vào mục trợ giúp"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</button></li>
+		</ul>
+		<div id="chonnguondoc" style="margin-top:10px">
+		 <b>Người đọc:</b>
+		 <label class="radio-inline"  data-toggle="tooltip" data-placement="bottom" title="Chọn nguồn đọc bằng Google Translate, có thể đọc được nhiều thứ tiếng khác nhau.">
+		  <input type="radio" name="chonnguondocrad" id="chonnguondocrad1" value="cddocgt"> Google Translate
+		</label>
+		<label class="radio-inline"  data-toggle="tooltip" data-placement="bottom" title="Nguồn được lấy từ dữ liệu đọc của máy tính, đôi lúc hơi lâu để khởi động đọc, nhưng đọc cả câu rất hay, và có nhiều tùy chọn đẹp bên dưới so với Google Translate.">
+		  <input type="radio" name="chonnguondocrad" id="chonnguondocrad1" value="cddocchuan"  data-toggle="tooltip" data-placement="bottom" title=""> Đọc chuẩn người thật
+		</label>
+		</div>
+		<div id="phancaidatgiongnoi" style="margin-left: 20px;">
+			<h4  data-toggle="tooltip" data-placement="bottom" title="Đừng quên khi nhấp chuột phải và trang bất kỳ, chúng ta còn nhiều mục cài đặt hay cho phần mềm nữa">Cài đặt "Đọc chuẩn người thật":</h4>
+		<div class="input-group" id="chongiongnoi"   data-toggle="tooltip" data-placement="bottom" title="Đôi lúc mục này sẽ không có gì để chọn, vì máy tính của em không có sẵn dữ liệu âm thanh trên máy, hãy sử dụng Google Translate nếu khung này trống không">
+			<span class="input-group-addon">Chọn giọng nói: </span>
+		  <select class="form-control">
+        </select>
+		 </div>
+		 <div class="input-group" id="tocdodoc"   data-toggle="tooltip" data-placement="bottom" title="Lợi điểm của cách đọc này là có thể chọn tốc độ đọc nhanh chậm tùy người sử dụng, để học ngoại ngữ tốt hơn.">
+			<span class="input-group-addon">Tốc độ đọc: <span id="updaterate"></span></span>
+		  <div id="slider">
+			<input type="range" name="rate" id="rate" min="0.1" max="2" step="0.1">
+			</div>
+		 </div>
+		 <div class="input-group" id="amthanh"   data-toggle="tooltip" data-placement="bottom" title="Và có thể điều chỉnh được âm lượng nữa">
+			<span class="input-group-addon">Âm lượng: <span id="updatevolume"></span></span>
+		  <div id="slider">
+			<input type="range" name="volume" id="volume" min="0" max="1" step="0.01">
+			</div>
+		 </div>
+		 <h4>Cài đặt "Đọc bằng Google Translate":</h4>
+		 <div class="input-group" id="gtdocngonngu"   data-toggle="tooltip" data-placement="bottom" title="Nhược điểm của Google Translate là không có các cài đặt trên, nhưng bù lại nó đọc rất nhanh khi khối chữ lại và có thể đọc được bất kỳ thứ tiếng nào mà chỉ định bên dưới.">
+			<span class="input-group-addon">Đọc ngôn ngữ: </span>
+		  <select class="form-control" >
+        </select>
+		 </div>
+		 </div>
+		 <h4>Cài đặt "Từ điển":</h4>
+		 <div id="chonnguontudien" style="margin-left:20px"  >
+			 <b>Nguồn dịch:</b>
+			 <label class="radio-inline"  data-toggle="tooltip" data-placement="bottom" title="Sự khác nhau cơ bản của 2 loại nguồn từ điển này là Google Transate có thể dịch được cả câu và các từ ngữ chuyên ngành tốt nhưng lại không có phần phiên âm với tiếng Anh. Các tiếng khác thì có hướng dẫn đọc.">
+			  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="cddichgt"> Google Translate
+			</label>
+			<label class="radio-inline" data-toggle="tooltip" data-placement="bottom" title="Còn nguồn này thì dịch kiểu từ điển Lạc Việt, nhưng số lượng từ ít, và bù lại có phần phiên âm hướng dẫn cách đọc cho người mới học anh văn. Chọn mục này có nghĩa là chỉ học anh văn, các ngôn ngữ khác không thể dịch được.">
+			  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="cddich123"> Có phiên âm (chỉ tiếng anh)
+			</label>
+			</div>
+			 <div class="input-group" id="gttudien" style="margin-left:20px"   data-toggle="tooltip" data-placement="bottom" title="Nếu sử dụng nguồn dịch Google Transate thì lợi điểm nữa là nó có thể tự động phát hiện ngôn nữa và trả về nghĩa của câu từ đó theo loại ngôn ngữ đích đến được chỉ định bên dưới.">
+				<span class="input-group-addon">Tự dịch sang: </span>
+			  <select class="form-control" >
+			  </select>
+			 </div>
+	</div>
+
+      </div>
+		
+    </div>
+  </div>
+
+	 
+	 
+
+
+  </body>
+</html>
