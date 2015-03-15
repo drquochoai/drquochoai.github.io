@@ -118,13 +118,14 @@ function addbsspan(e, m){
 				}) */
 				$(this).find("bs").hover(function(){
 					var text = $(this).text()
+					var mythis = $(this)
 					docroi= 0
 					$(window).keydown(function(k){
 						if ( k.ctrlKey == true && docroi == 0){
 							docroi = 1
 							doctu(m, text)
 							tudien(m, text)
-							$(this).attr("style", "background-color: rgb(102, 162, 255);")
+							mythis.attr("style", "background-color: rgb(168, 223, 87);")
 						}
 					})
 				}, function(){
