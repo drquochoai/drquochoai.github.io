@@ -1,10 +1,7 @@
-﻿{trangchu: Trang chủ,
-	baihoc: {
-		ensg: {
-		
-		},
-		coen: {
-		
-		}
-	}
+﻿{
+   "trangchu": "Trang chủ",
+   "baihoc": {
+      "ensg": {},
+      "coen": {}
+   }
 }
