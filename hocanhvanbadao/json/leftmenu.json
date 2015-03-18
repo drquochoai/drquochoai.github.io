@@ -1,53 +1,7 @@
 ﻿{  
-   "query":{  
-      "count":1,
-      "created":"2015-03-18T07:31:58Z",
-      "lang":"en-US",
-      "diagnostics":{  
-         "publiclyCallable":"true",
-         "user-time":"35",
-         "service-time":"0",
-         "build-version":"0.2.438"
-      },
-      "results":{  
-         "table":{  
-            "hash":"b5cd875b1e25dd038cc6d7e7d04c4ba5",
-            "name":"yql.storage",
-            "security":"ANY",
-            "meta":{  
-               "sampleQuery":null
-            },
-            "request":{  
-               "update":{  
-                  "key":{  
-                     "name":"name",
-                     "type":"xs:string"
-                  },
-                  "value":[  
-                     {  
-                        "name":"value",
-                        "type":"xs:string"
-                     },
-                     {  
-                        "name":"url",
-                        "type":"xs:string"
-                     }
-                  ]
-               },
-               "delete":{  
-                  "key":{  
-                     "name":"name",
-                     "type":"xs:string"
-                  }
-               },
-               "select":{  
-                  "key":{  
-                     "name":"name",
-                     "type":"xs:string"
-                  }
-               }
-            }
-         }
-      }
-   }
+   "trangchu": "Trang chủ",
+	"ensg": {
+		"title": "Anh văn bá đạo",
+		"name": "bsquochoai"
+	}
 }
