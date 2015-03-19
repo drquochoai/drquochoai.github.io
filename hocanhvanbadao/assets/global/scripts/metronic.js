@@ -487,7 +487,7 @@ var Metronic = function() {
             //UI Component handlers            
             handleUniform(); // hanfle custom radio & checkboxes
             handleiCheck(); // handles custom icheck radio and checkboxes
-            handleBootstrapSwitch(); // handle bootstrap switch plugin
+            //handleBootstrapSwitch(); // handle bootstrap switch plugin
             handleScrollers(); // handles slim scrolling contents 
             handleFancybox(); // handle fancy box
             handleSelect2(); // handle custom Select2 dropdowns
