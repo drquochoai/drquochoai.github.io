@@ -1,11 +1,18 @@
 ﻿{
+	"vars":{
+		"icon": ["plane", "notebook","screen-desktop","badge","basket-loaded","calculator","diamond","cup","globe-alt","puzzle", "pie-chart"],
+		"sobaiClass" : ["danger", "warning", "success", "primary"]
+	},
    "trangchu": {
 		"title": "Trang chủ",
-		"icon": "icon-home"
+		"icon": "home",
+		"href": "#trangchu",
+		"addSeperationAfter": "Các bộ bài học"
 	},
 	"ensg": {
 		"title": "Anh văn bá đạo",
-		"icon": "icon-home",
+		"tenmoibai":"Godlike English",
+		"hiennewkhong": "hay",
 		"des": "Loạt bài anh văn cực hay với nhiều cái bá đạo và báo đạ ",
 		"cachhoc":"nghe và điền vào chỗ trống",
 		"submenu": {
