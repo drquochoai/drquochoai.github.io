@@ -477,6 +477,33 @@ var Metronic = function() {
             // Hacks
             handleFixInputPlaceholderForIE(); //IE8 & IE9 input placeholder issue fix
         },
+		  initBsquochoai: function() {
+            //IMPORTANT!!!: Do not modify the core handlers call order.
+
+            //Core handlers
+            handleInit(); // initialize core variables
+            handleOnResize(); // set and handle responsive    
+
+            //UI Component handlers            
+            handleUniform(); // hanfle custom radio & checkboxes
+            handleiCheck(); // handles custom icheck radio and checkboxes
+            handleBootstrapSwitch(); // handle bootstrap switch plugin
+            handleScrollers(); // handles slim scrolling contents 
+            handleFancybox(); // handle fancy box
+            handleSelect2(); // handle custom Select2 dropdowns
+            handlePortletTools(); // handles portlet action bar functionality(refresh, configure, toggle, remove)
+            handleAlerts(); //handle closabled alerts
+            handleDropdowns(); // handle dropdowns
+            handleTabs(); // handle tabs
+            handleTooltips(); // handle bootstrap tooltips
+            handlePopovers(); // handles bootstrap popovers
+            //handleAccordions(); //handles accordions 
+            handleModals(); // handle modals
+            handleBootstrapConfirmation(); // handle bootstrap confirmations
+
+            // Hacks
+            handleFixInputPlaceholderForIE(); //IE8 & IE9 input placeholder issue fix
+        },
 
         //main function to initiate core javascript after ajax complete
         initAjax: function() {

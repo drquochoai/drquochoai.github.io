@@ -1,7 +1,18 @@
-﻿{  
-   "trangchu": "Trang chủ",
+﻿{
+   "trangchu": {
+		"title": "Trang chủ",
+		"icon": "icon-home"
+	},
 	"ensg": {
 		"title": "Anh văn bá đạo",
-		"name": "bsquochoai"
+		"icon": "icon-home",
+		"des": "Loạt bài anh văn cực hay với nhiều cái bá đạo và báo đạ ",
+		"cachhoc":"nghe và điền vào chỗ trống",
+		"submenu": {
+			"ma": "en_sg_",
+			"title": "Anh văn Saga cực hay",
+			"sobai": 23,
+			"socau":[123,134]
+		}
 	}
 }
