@@ -53,7 +53,7 @@
 
 		this.each( function()
 		{
-			if( $( this ).prop( 'tagName' ).toLowerCase() != 'audio' && $(this).attr("data-bsthemroi") != "1")
+			if( $( this ).prop( 'tagName' ).toLowerCase() != 'audio' )
 				return false;
 
 			var $this	   = $( this ),
