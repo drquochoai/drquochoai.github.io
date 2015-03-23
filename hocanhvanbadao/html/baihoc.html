@@ -1,0 +1,470 @@
+﻿<style>
+   /***
+   TODO Page
+   ***/
+   .todo-ui {
+   margin-top: 20px;
+   }
+   .todo-sidebar {
+   float: left;
+   width: 230px;
+   margin-right: 20px;
+   }
+   .todo-content {
+   overflow: hidden;
+   }
+   .todo-tasklist-item-border-green {
+   border-left: #3faba4 2px solid;
+   }
+   .todo-tasklist-item-border-blue {
+   border-left: #4c87b9 2px solid;
+   }
+   .todo-tasklist-item-border-purple {
+   border-left: #8877a9 2px solid;
+   }
+   .todo-tasklist-item-border-red {
+   border-left: #d05454 2px solid;
+   }
+   .todo-tasklist-item-border-yellow {
+   border-left: #d4ad38 2px solid;
+   }
+   .padding-top-10px {
+   padding-top: 15px;
+   }
+   .todo-userpic {
+   -webkit-border-radius: 50% !important;
+   -moz-border-radius: 50% !important;
+   border-radius: 50% !important;
+   border: 1px #cedae1 solid;
+   }
+   .todo-text-color {
+   color: #45535b;
+   }
+   /* PROJECT LIST */
+   .todo-projects-config {
+   padding: 6px 9px 3px 9px !important;
+   }
+   .todo-projects-config > i {
+   font-size: 14px !important;
+   }
+   .todo-projects-config > .fa-angle-down {
+   position: relative;
+   display: inline-block;
+   top: -1px;
+   font-size: 13px !important;
+   color: #f2f2f2;
+   }
+   .todo-tasklist {
+   padding: 0;
+   }
+   .todo-project-list ul li a {
+   font-size: 14px !important;
+   padding: 8px 10px;
+   }
+   .todo-project-list .nav li a .badge {
+   float: right;
+   background-color: #b4c4cd !important;
+   margin-top: 1px !important;
+   }
+   .todo-project-list .nav li a .badge-active {
+   background-color: #ffffff !important;
+   color: #637b89 !important;
+   }
+   .todo-project-list .nav .active {
+   background-color: #ffffff !important;
+   }
+   .todo-project-list .nav-pills > li.active > a {
+   background-color: #87a9c7 !important;
+   }
+   /* END PROJECT LIST */
+   /* TASK HISTORY */
+   .todo-task-history {
+   padding: 0;
+   margin: 0;
+   }
+   .todo-task-history > li {
+   padding: 5px 0;
+   }
+   .todo-task-history > li > .todo-task-history-desc {
+   overflow: hidden;
+   }
+   .todo-task-history > li > .todo-task-history-date {
+   font-size: 12px;
+   float: right;
+   width: 150px;
+   margin-left: 10px;
+   text-align: right;
+   color: #999;
+   }
+   /* TASKS LIST */
+   .todo-tasklist-item {
+   background: #f6fbfc;
+   padding: 10px;
+   margin-bottom: 10px;
+   margin-bottom: 15px;
+   overflow: hidden;
+   }
+   .todo-tasklist-item:last-child {
+   margin-bottom: 0;
+   }
+   div .todo-tasklist-item:hover {
+   cursor: pointer;
+   background-color: #edf7f9;
+   }
+   .todo-tasklist-item img {
+   margin: 0 10px 10px 0;
+   }
+   .todo-tasklist-item-title {
+   font-size: 15px;
+   color: #2b4a5c;
+   font-weight: 600;
+   padding-top: 3px;
+   padding-bottom: 13px;
+   }
+   .todo-tasklist-item-text {
+   font-size: 13px;
+   color: #577688;
+   padding-bottom: 5px;
+   }
+   .todo-tasklist-item ul {
+   margin: 5px 0 0 0px;
+   }
+   .todo-tasklist-item li {
+   color: #577688;
+   font-size: 13px;
+   margin-right: 10px;
+   margin-bottom: 5px;
+   padding: 0 !important;
+   }
+   .todo-tasklist-item li i {
+   color: #b3bfcb;
+   font-size: 15px;
+   }
+   .todo-tasklist-controls {
+   margin-top: 5px;
+   }
+   .todo-tasklist-date {
+   color: #637b89 !important;
+   margin-right: 12px;
+   }
+   .todo-tasklist-date i {
+   color: #abbfca !important;
+   margin-right: 5px;
+   }
+   .todo-tasklist-badge {
+   background-color: #b3bfcb;
+   }
+   /* END TASKS LIST */
+   /* TASK BODY */
+   .todo-taskbody-tasktitle {
+   font-size: 18px;
+   color: #778d96;
+   }
+   .todo-taskbody-taskdesc {
+   font-size: 14px;
+   color: #778d96;
+   }
+   .todo-username {
+   font-size: 16px;
+   color: #2b4a5c;
+   font-weight: 600;
+   padding: 15px 0 0 15px;
+   }
+   .todo-comment-head {
+   padding-top: 3px;
+   }
+   .todo-comment {
+   position: relative;
+   }
+   .todo-comment:hover > .todo-comment-btn {
+   display: block;
+   }
+   .todo-comment-btn {
+   display: none;
+   position: absolute;
+   top: 1px;
+   right: 0px;
+   font-size: 12px;
+   color: #566e7c;
+   border-color: #a2aeb5;
+   }
+   .todo-comment-btn:hover {
+   color: #fff;
+   background-color: #a1b6c2;
+   border-color: #a1b6c2;
+   }
+   .todo-comment-username {
+   font-size: 14px;
+   color: #2b4a5c;
+   font-weight: 600;
+   }
+   .todo-comment-date {
+   font-size: 12px;
+   color: #2b4a5c;
+   font-weight: 400;
+   }
+   .todo-username-btn {
+   margin: 14px 0 0 15px;
+   color: #566e7c;
+   border-color: #a2aeb5;
+   }
+   .todo-username-btn:hover {
+   color: #fff;
+   background-color: #a1b6c2;
+   border-color: #a1b6c2;
+   }
+   .form .form-actions.todo-form-actions {
+   padding-top: 10px;
+   border: 0;
+   margin: 0 0 20px 0;
+   }
+   /* END TASK BODY */
+   /* RESPONSIVE MODE */
+   @media (max-width: 991px) {
+   /* 991px */
+   .todo-sidebar {
+   float: none;
+   width: 100%;
+   margin: 0;
+   }
+   .todo-sidebar > .portlet {
+   margin-bottom: 20px;
+   }
+   .todo-sidebar > .portlet .portlet-title .tools {
+   margin-left: 5px;
+   }
+   .todo-content {
+   overflow: visible;
+   }
+   }
+   .todo-tasklist-devider {
+   display: none;
+   }
+   @media (max-width: 767px) {
+   /* 767px */
+   .todo-tasklist-devider {
+   display: block;
+   height: 20px;
+   margin: 20px -10px;
+   background: #F1F3FA;
+   }
+   /* TASK HISTORY */
+   .todo-task-history > li {
+   padding: 9px 0;
+   }
+   .todo-task-history > li > .todo-task-history-date {
+   width: 100px;
+   font-size: 11px;
+   }
+   }
+   .audioplayer 		{ 			height: 2.5em; /* 40 */ 			color: #fff; 			text-shadow: 1px 1px 0 #000;  			position: relative; 			z-index: 1; 			background: #4B8DF8; 		}   			/* mini mode (fallback) */  			.audioplayer-mini 			{ 				width: 2.5em; /* 40 */ 				margin: 0 auto; 			}   			/* player elements: play/pause and volume buttons, played/duration timers, progress bar of loaded/played */  			.audioplayer > div 			{ 				position: absolute; 			}   			/* play/pause button */  			.audioplayer-playpause 			{ 				width: 2.5em; /* 40 */ 				height: 100%; 				text-align: left; 				text-indent: -9999px; 				cursor: pointer; 				z-index: 2; 				top: 0; 				left: 0; 			} 				.audioplayer:not(.audioplayer-mini) .audioplayer-playpause 				{ 					border-right: 1px solid #555; 					border-right-color: rgba( 255, 255, 255, .1 ); 				} 				.audioplayer-mini .audioplayer-playpause 				{ 					width: 100%; 				} 				.audioplayer-playpause:hover, 				.audioplayer-playpause:focus 				{ 					background-color: #222; 				} 				.audioplayer-playpause a 				{ 					display: block; 				} 				.audioplayer-stopped .audioplayer-playpause a 				{ 					width: 0; 					height: 0; 					border: 0.5em solid transparent; /* 8 */ 					border-right: none; 					border-left-color: #fff; 					content: ''; 					position: absolute; 					top: 50%; 					left: 50%; 					margin: -0.5em 0 0 -0.25em; /* 8 4 */ 				} 				.audioplayer-playing .audioplayer-playpause a 				{ 					width: 0.75em; /* 12 */ 					height: 0.75em; /* 12 */ 					position: absolute; 					top: 50%; 					left: 50%; 					margin: -0.375em 0 0 -0.375em; /* 6 */ 				} 					.audioplayer-playing .audioplayer-playpause a:before, 					.audioplayer-playing .audioplayer-playpause a:after 					{ 						width: 40%; 						height: 100%; 						background-color: #fff; 						content: ''; 						position: absolute; 						top: 0; 					} 					.audioplayer-playing .audioplayer-playpause a:before 					{ 						left: 0; 					} 					.audioplayer-playing .audioplayer-playpause a:after 					{ 						right: 0; 					}   			/* timers */  			.audioplayer-time 			{ 				width: 4.375em; /* 70 */ 				height: 100%; 				line-height: 2.375em; /* 38 */ 				text-align: center; 				z-index: 2; 				top: 0; 			} 				.audioplayer-time-current 				{ 								left: 2.5em; /* 40 */ 				} 				.audioplayer-time-duration 				{ 					border-right: 1px solid #555; 					border-right-color: rgba( 255, 255, 255, .1 ); 					right: 2.5em; /* 40 */ 				} 					.audioplayer-novolume .audioplayer-time-duration 					{ 						border-right: 0; 						right: 0; 					}   			/* progress bar of loaded/played */  			.audioplayer-bar 			{ 				height: 0.875em; /* 14 */ 				background-color: #9478F7; 				cursor: pointer; 				z-index: 1; 				top: 50%; 				right: 6.875em; /* 110 */ 				left: 6.875em; /* 110 */ 				margin-top: -0.438em; /* 7 */ 			} 				.audioplayer-novolume .audioplayer-bar 				{ 					right: 4.375em; /* 70 */ 				} 				.audioplayer-bar div 				{ 					width: 0; 					height: 100%; 					position: absolute; 					left: 0; 					top: 0; 				} 				.audioplayer-bar-loaded 				{ 					background-color:#D8FCCE; 					z-index: 1; 				} 				.audioplayer-bar-played 				{ 					background: #007fd1; 					z-index: 2; 				}   			/* volume button */  			.audioplayer-volume 			{ 				width: 2.5em; /* 40 */ 				height: 100%; 				border-left: 1px solid #111; 				border-left-color: rgba( 0, 0, 0, .25 ); 				text-align: left; 				text-indent: -9999px; 				cursor: pointer; 				z-index: 2; 				top: 0; 				right: 0; 			} 				.audioplayer-volume:hover, 				.audioplayer-volume:focus 				{ 					background-color: #222; 				} 				.audioplayer-volume-button 				{ 					width: 100%; 					height: 100%; 				} 					.audioplayer-volume-button a 					{ 						width: 0.313em; /* 5 */ 						height: 0.375em; /* 6 */ 						background-color: #fff; 						display: block; 						position: relative; 						z-index: 1; 						top: 40%; 						left: 35%; 					} 						.audioplayer-volume-button a:before, 						.audioplayer-volume-button a:after 						{ 							content: ''; 							position: absolute; 						} 						.audioplayer-volume-button a:before 						{ 							width: 0; 							height: 0; 							border: 0.5em solid transparent; /* 8 */ 							border-left: none; 							border-right-color: #fff; 							z-index: 2; 							top: 50%; 							right: -0.25em; 							margin-top: -0.5em; /* 8 */ 						} 						.audioplayer:not(.audioplayer-muted) .audioplayer-volume-button a:after 						{ 							/* "volume" icon by Nicolas Gallagher, http://nicolasgallagher.com/pure-css-gui-icons */ 							width: 0.313em; /* 5 */ 							height: 0.313em; /* 5 */ 							border: 0.25em double #fff; /* 4 */ 							border-width: 0.25em 0.25em 0 0; /* 4 */ 							left: 0.563em; /* 9 */ 							top: -0.063em; /* 1 */ 							-webkit-border-radius: 0 0.938em 0 0; /* 15 */ 							-moz-border-radius: 0 0.938em 0 0; /* 15 */ 							border-radius: 0 0.938em 0 0; /* 15 */ 							-webkit-transform: rotate( 45deg ); 							-moz-transform: rotate( 45deg ); 							-ms-transform: rotate( 45deg ); 							-o-transform: rotate( 45deg ); 							transform: rotate( 45deg ); 						}   				/* volume dropdown */  				.audioplayer-volume-adjust 				{ 					height: 6.25em; /* 100 */ 					cursor: default; 					position: absolute; 					left: 0; 					right: -1px; 					top: -9999px; 					background: #333; 				} 					.audioplayer-volume:not(:hover) .audioplayer-volume-adjust 					{ 						opacity: 0; 					} 					.audioplayer-volume:hover .audioplayer-volume-adjust 					{ 						top: auto; 						bottom: 100%; 					} 					.audioplayer-volume-adjust > div 					{ 						width: 40%; 						height: 80%; 						background-color: #222; 						cursor: pointer; 						position: relative; 						z-index: 1; 						margin: 30% auto 0; 					} 						.audioplayer-volume-adjust div div 						{ 							width: 100%; 							height: 100%; 							position: absolute; 							bottom: 0; 							left: 0; 							background: #007fd1; 						} 				.audioplayer-novolume .audioplayer-volume 				{ 					display: none; 				}   			/* CSS3 decorations */  			body 			{ 				-webkit-box-shadow: inset 0 0 18.75em rgba( 0, 0, 0, .5 ); /* 300 */ 				-moz-box-shadow: inset 0 0 18.75em rgba( 0, 0, 0, 5 ); /* 300 */ 				box-shadow: inset 0 0 18.75em rgba( 0, 0, 0, .5 ); /* 300 */ 			} 			.audioplayer 			{ 				-webkit-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */ 				-moz-box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */ 				box-shadow: inset 0 1px 0 rgba( 255, 255, 255, .15 ), 0 0 1.25em rgba( 0, 0, 0, .5 ); /* 20 */ 			} 			.audioplayer-volume-adjust 			{ 				-webkit-box-shadow: -2px -2px 2px rgba( 0, 0, 0, .15 ), 2px -2px 2px rgba( 0, 0, 0, .15 ); 				-moz-box-shadow: -2px -2px 2px rgba( 0, 0, 0, .15 ), 2px -2px 2px rgba( 0, 0, 0, .15 ); 				box-shadow: -2px -2px 2px rgba( 0, 0, 0, .15 ), 2px -2px 2px rgba( 0, 0, 0, .15 ); 			} 			.audioplayer-bar, 			.audioplayer-volume-adjust > div 			{ 				-webkit-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 ); 				-moz-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 ); 				box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 ); 			} 			.audioplayer-volume-adjust div div, 			.audioplayer-bar-played 			{ 				-webkit-box-shadow: inset 0 0 5px rgba( 255, 255, 255, .5 ); 				-moz-box-shadow: inset 0 0 5px rgba( 255, 255, 255, .5 ); 				box-shadow: inset 0 0 5px rgba( 255, 255, 255, .5 ); 			} 			.audioplayer-playpause, 			.audioplayer-volume a 			{ 				-webkit-filter: drop-shadow( 1px 1px 0 #000 ); 				-moz-filter: drop-shadow( 1px 1px 0 #000 ); 				-ms-filter: drop-shadow( 1px 1px 0 #000 ); 				-o-filter: drop-shadow( 1px 1px 0 #000 ); 				filter: drop-shadow( 1px 1px 0 #000 ); 			} 			.audioplayer, 			.audioplayer-volume-adjust 			{ 					} 			.audioplayer-bar-played 			{ 				background: -webkit-gradient( linear, left top, right top, from( #007fd1 ), to( #c600ff ) ); 				background: -webkit-linear-gradient( left, #007fd1, #c600ff ); 				background: -moz-linear-gradient( left, #007fd1, #c600ff ); 				background: -ms-radial-gradient( left, #007fd1, #c600ff ); 				background: -o-linear-gradient( left, #007fd1, #c600ff ); 				background: linear-gradient( to right, #007fd1, #c600ff ); 			} 			.audioplayer-volume-adjust div div 			{ 				background: -webkit-gradient( linear, left bottom, left top, from( #007fd1 ), to( #c600ff ) ); 				background: -webkit-linear-gradient( bottom, #007fd1, #c600ff ); 				background: -moz-linear-gradient( bottom, #007fd1, #c600ff ); 				background: -ms-radial-gradient( bottom, #007fd1, #c600ff ); 				background: -o-linear-gradient( bottom, #007fd1, #c600ff ); 				background: linear-gradient( to top, #007fd1, #c600ff ); 			} 			.audioplayer-bar, 			.audioplayer-bar div, 			.audioplayer-volume-adjust div 			{ 				-webkit-border-radius: 4px; 				-moz-border-radius: 4px; 				border-radius: 4px; 			} 			.audioplayer 			{ 				-webkit-border-radius: 2px; 				-moz-border-radius: 2px; 				border-radius: 2px; 			} 			.audioplayer-volume-adjust 			{ 				-webkit-border-top-left-radius: 2px; 				-webkit-border-top-right-radius: 2px; 				-moz-border-radius-topleft: 2px; 				-moz-border-radius-topright: 2px; 				border-top-left-radius: 2px; 				border-top-right-radius: 2px; 			} 			.audioplayer *, 			.audioplayer *:before, 			.audioplayer *:after 			{ 				-webkit-transition: color .25s ease, background-color .25s ease, opacity .5s ease; 				-moz-transition: color .25s ease, background-color .25s ease, opacity .5s ease; 				-ms-transition: color .25s ease, background-color .25s ease, opacity .5s ease; 				-o-transition: color .25s ease, background-color .25s ease, opacity .5s ease; 				transition: color .25s ease, background-color .25s ease, opacity .5s ease; 			}
+   .hidden{display:none}
+   #noidungcauhoi{
+   font-size: 20px;
+   font-weight: bold;
+   word-wrap: break-word;
+   }
+	#bsquochoai_checkdapan bs {
+		color:red
+	}
+	#bsquochoai_checkdapan i {
+		  font-size: 75%;
+	}
+	#bsquochoai_checkdapan {
+		padding: 6px;
+		margin-bottom: 13px;
+	}
+	.dapandung {
+		background-color: rgb(16, 139, 176);
+	  color: white;
+	  text-align: center;
+    -moz-transition: all 0.6s ease-in;
+    -webkit-transition: all 0.6s ease-in;
+    -o-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+	}
+</style>
+<!-- BEGIN PAGE CONTENT-->
+<div class="row">
+   <div class="col-md-12">
+      <!-- BEGIN TODO CONTENT -->
+      <div class="todo-content">
+         <div class="portlet light">
+            <div class="portlet-body">
+               <div class="row">
+					                  <div class="col-md-8 col-sm-9">
+                     <div class="" style="max-height: 600px;" data-always-visible="0" data-rail-visible="0" data-handle-color="#dae3e7">
+                        <div class="row margin-bottom-20">
+                           <div class="col-md-6">
+                              <div class="space20">
+                              </div>
+                              <h3 class="form-section">Câu hỏi</h3>
+                              <p id="noidungcauhoi">
+                              </p>
+                              <div id="noidung_img">
+                                 <img src="e" class="img-responsive img-thumbnail" alt="Cinque Terre" >
+                              </div>
+                              <div id="preload_img_src" style="display:none">
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="space20">
+                              </div>
+                              <!-- BEGIN FORM-->
+                              <form action="#">
+                                 <h3 class="form-section">Trả lời của em</h3>
+                                 <p>
+											<div id="bsquochoai_checkdapan" style="font-weight:bold; font-size:17px">Hãy nhập câu trả lời của em vào khung bên dưới</div>
+                                 <div class="form-group">
+                                    <textarea class="form-control" id="bsquochoai_ketqua" rows="3=6" placeholder="Câu trả lời của em"></textarea>
+                                 </div>
+                                 <div id="bsquochoai_boaudio"></div>
+											<div id="bsquochoai_audioketqua" style="display:none"></div>
+                                 <div style="  display: flex;">
+                                    <div id="menuicon" style="margin: auto; display: inline-block;">
+                                       <a href="javascript:;" class="btn btn-icon-only btn-circle blue" id="menu_prev"><i class="fa fa-arrow-left"></i></a>
+                                       <a href="javascript:;" class="btn btn-icon-only btn-circle blue" id="menu_repeat"><i class="fa fa-repeat"></i></a>
+                                       <a href="javascript:;" class="btn btn-icon-only btn-circle blue" id="menu_next"><i class="fa fa-arrow-right"></i></a>
+                                       <a href="javascript:;" class="btn btn-icon-only btn-circle blue" id="menu_nghedapan"><i class="fa fa-headphones"></i></a>
+                                       <a href="javascript:;" class="btn btn-icon-only btn-circle blue" id="menu_hiendapan"><i class="fa fa-key"></i></a>
+                                       <a href="javascript:;" class="btn btn-icon-only btn-circle blue" id="menu_save"><i class="fa fa-floppy-o"></i></a>
+                                    </div>
+                                 </div>
+                                 </p>
+                              </form>
+                              <!-- END FORM-->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-3">
+                     <div class="scroller" style="max-height: 600px;" data-always-visible="0" data-rail-visible="0" data-handle-color="#dae3e7">
+                        <div class="todo-tasklist">
+                           <div class="todo-tasklist-item todo-tasklist-item-border-green">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar4.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 Slider Redesign
+                              </div>
+                              <div class="todo-tasklist-item-text">
+                                 Lorem dolor sit amet ipsum dolor sit consectetuer dolore.
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 21 Sep 2014 </span>
+                                 <span class="todo-tasklist-badge badge badge-roundless">Urgent</span>
+                              </div>
+                           </div>
+                           <div class="todo-tasklist-item todo-tasklist-item-border-red">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar5.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 Homepage Alignments to adjust
+                              </div>
+                              <div class="todo-tasklist-item-text">
+                                 Lorem ipsum dolor sit amet, consectetuer dolore dolor sit amet.
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 14 Sep 2014 </span>
+                                 <span class="todo-tasklist-badge badge badge-roundless">Important</span>
+                              </div>
+                           </div>
+                           <div class="todo-tasklist-item todo-tasklist-item-border-green">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar9.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 Slider Redesign
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 10 Feb 2015 </span>
+                                 <span class="todo-tasklist-badge badge badge-roundless">Important</span>&nbsp;
+                              </div>
+                           </div>
+                           <div class="todo-tasklist-item todo-tasklist-item-border-blue">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar6.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 Contact Us Map Location changes
+                              </div>
+                              <div class="todo-tasklist-item-text">
+                                 Lorem ipsum amet, consectetuer dolore dolor sit amet.
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 04 Oct 2014 </span>
+                                 <span class="todo-tasklist-badge badge badge-roundless">Postponed</span>&nbsp; <span class="todo-tasklist-badge badge badge-roundless">Test</span>
+                              </div>
+                           </div>
+                           <div class="todo-tasklist-item todo-tasklist-item-border-purple">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar7.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 Projects list new Forms
+                              </div>
+                              <div class="todo-tasklist-item-text">
+                                 Lorem ipsum dolor sit amet, consectetuer dolore psum dolor sit.
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 19 Dec 2014 </span>
+                              </div>
+                           </div>
+                           <div class="todo-tasklist-item todo-tasklist-item-border-yellow">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar8.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 New Search Keywords
+                              </div>
+                              <div class="todo-tasklist-item-text">
+                                 Lorem ipsum dolor sit amet, consectetuer sit amet ipsum dolor, consectetuer ipsum consectetuer sit amet dolore.
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 02 Feb 2015 </span>
+                                 <span class="todo-tasklist-badge badge badge-roundless">Postponed</span>&nbsp;
+                              </div>
+                           </div>
+                           <div class="todo-tasklist-item todo-tasklist-item-border-green">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar9.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 Slider Redesign
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 10 Feb 2015 </span>
+                                 <span class="todo-tasklist-badge badge badge-roundless">Important</span>&nbsp;
+                              </div>
+                           </div>
+                           <div class="todo-tasklist-item todo-tasklist-item-border-red">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar5.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 Homepage Alignments to adjust
+                              </div>
+                              <div class="todo-tasklist-item-text">
+                                 Lorem ipsum dolor sit amet, consectetuer dolore psum dolor sit.
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 14 Sep 2014 </span>
+                                 <span class="todo-tasklist-badge badge badge-roundless">Important</span>
+                              </div>
+                           </div>
+                           <div class="todo-tasklist-item todo-tasklist-item-border-blue">
+                              <img class="todo-userpic pull-left" src="../../assets/admin/layout/img/avatar6.jpg" width="27px" height="27px">
+                              <div class="todo-tasklist-item-title">
+                                 Contact Us Improvement
+                              </div>
+                              <div class="todo-tasklist-item-text">
+                                 Lorem ipsum amet, psum dolor sit consectetuer dolore.
+                              </div>
+                              <div class="todo-tasklist-controls pull-left">
+                                 <span class="todo-tasklist-date"><i class="fa fa-calendar"></i> 21 Feb 2015 </span>
+                                 <span class="todo-tasklist-badge badge badge-roundless">Postponed</span>&nbsp; <span class="todo-tasklist-badge badge badge-roundless">Primary</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END TODO CONTENT -->
+   </div>
+</div>
+<!-- END PAGE CONTENT-->
+<script>
+   $( function()
+   {
+   	$( 'audio' ).audioPlayer();
+   });
+</script>
