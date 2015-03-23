@@ -45,7 +45,8 @@
 				volumeAdjust: 	'volume-adjust',
 				noVolume: 		'novolume',
 				muted: 			'muted',
-				mini: 			'mini'
+				mini: 			'mini',
+				pause: 'pause'
 			};
 
 		for( var subName in cssClassSub )
@@ -146,10 +147,6 @@
 					thePlayer.removeClass( cssClass.playing ).addClass( cssClass.stopped );
 				});
 
-				theAudio.addEventListener( 'pause', function()
-				{
-					thePlayer.removeClass( cssClass.playing ).addClass( "bsquochoai_pause" );
-				});
 
 				theBar.on( eStart, function( e )
 				{
