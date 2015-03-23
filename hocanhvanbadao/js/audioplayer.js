@@ -146,6 +146,11 @@
 					thePlayer.removeClass( cssClass.playing ).addClass( cssClass.stopped );
 				});
 
+				theAudio.addEventListener( 'pause', function()
+				{
+					thePlayer.removeClass( cssClass.playing ).addClass( "bsquochoai_pause" );
+				});
+
 				theBar.on( eStart, function( e )
 				{
 					adjustCurrentTime( e );
