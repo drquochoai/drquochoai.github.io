@@ -1,4 +1,4 @@
-﻿git add .
+git add .
 git commit -am  "s"
 git clean -n
 git clean -df
