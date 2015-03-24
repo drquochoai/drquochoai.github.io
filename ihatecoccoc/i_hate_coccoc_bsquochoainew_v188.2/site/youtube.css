@@ -1,4 +1,0 @@
-#topToolBarDiv a {text-decoration: none !important; color: rgb(196, 255, 246) !important}
-#topToolBarDiv a:hover { color: yellow !important}
-#topToolBarDiv {background: none 0px 0px no-repeat scroll rgba(0, 0, 0,0.6) !important; position:fixed !important; top:0px; display:none}
-#msgHelpPopup{position:fixed !important;background: none 0px 0px no-repeat scroll rgb(223, 254, 255) !important;}
